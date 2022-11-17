@@ -25,24 +25,7 @@ else
   e_warning "Skipped dotfiles settings."
 fi
 
-# Install npm packages
-seek_confirmation "Warning: This step install npm packages"
-if is_confirmed; then
-  bash ./install/npm.sh
-else
-  e_warning "Skipped npm settings update."
-fi
 
-# Generate ssh
-seek_confirmation "Warning: This step generate SSH"
-if is_confirmed; then
-  ask "Please provide an email address: " && printf "\n"
-  ssh-keygen -t rsa -b 4096 -C "$REPLY"
-  e_success "Generated SSH key."
-  e_warning "After finishing the installation, use copyssh command to copy the SSH key to the clipboard."
-else
-  e_warning "Skipped SSH settings."
-fi
 
 # Create a directory for projects and development
 e_header "Creating Developer directory in Home"
