@@ -50,3 +50,4 @@ sudo apt-get install terraform
 
 # Finish
 e_success "Finished applications installation."
+y

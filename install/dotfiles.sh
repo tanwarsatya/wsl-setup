@@ -10,14 +10,10 @@ keep_sudo_alive
 sudo apt -y install zsh
 
 # Install oh-my-zsh
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Install some external plugins:
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-
-git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
-
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+# Install P10K Theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Set Zsh as your default shell:
 chsh -s /bin/zsh
@@ -26,6 +22,7 @@ chsh -s /bin/zsh
 replace ".gitconfig"        ".gitconfig"
 replace ".gitignore_global" ".gitignore_global"
 replace ".zshrc"            ".zshrc"
+replace ".p10k.zsh"            ".p10k.zsh"
 
 # Git configs
 e_header "Configure your Git settings: "
