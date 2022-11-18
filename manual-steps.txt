@@ -1,7 +1,8 @@
-# this steps need to be run manual after everything
+# this steps need to be run manually after everything
 
 #1. Add user to sudoers file
 sudo sh -c "echo \"$USER ALL=(user) NOPASSWD: ALL\" >> /etc/sudoers"
 
 
-#2. Mount the
+#2. Mount the drive entry to .zshrc
+sudo mount -t drvfs '\\home-nas\VMSharedData\' /home/$USER/shareddata

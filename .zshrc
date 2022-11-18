@@ -113,11 +113,10 @@ source $ZSH/oh-my-zsh.sh
 # default directory
 cd ~
 
-sudo mount -t drvfs '\\home-nas\VMSharedData\' /home/$USER/shareddata
 
 alias k=kubectl
 complete -F __start_kubectl k
-[[ /usr/bin/kubectl ]] && source <(kubectl completion zsh)
+[[ /local/bin/kubectl ]] && source <(kubectl completion zsh)
 alias multipass=multipass.exe
 
 # add local bin to  path 
@@ -132,10 +131,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/terraform terraform
+#complete -o nospace -C /usr/bin/terraform terraform
 
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+#export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
