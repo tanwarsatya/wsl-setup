@@ -8,7 +8,7 @@ source ./install/utils.sh
 keep_sudo_alive
 
 # Add current user to sudoers file
-echo "$USER  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+#echo "stanwar  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # Create Directories
 e_header "Creating shareddata directory in Home"

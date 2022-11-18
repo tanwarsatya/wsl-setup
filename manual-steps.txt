@@ -1,0 +1,7 @@
+# this steps need to be run manual after everything
+
+#1. Add user to sudoers file
+sudo sh -c "echo \"$USER ALL=(user) NOPASSWD: ALL\" >> /etc/sudoers"
+
+
+#2. Mount the
