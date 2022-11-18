@@ -8,7 +8,7 @@ source ./install/utils.sh
 keep_sudo_alive
 
 # Add current user to sudoers file
-echo '$USER  ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+echo "$USER  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # Create Directories
 e_header "Creating shareddata directory in Home"
@@ -41,7 +41,7 @@ e_header "Removing unnecessary files"
 sudo apt -y autoremove
 rm -rf ${HOME}/wsl-setup.tar.gz
 rm -rf ${HOME}/wsl-setup.zip
-rm -rf ${DOTFILES_DIRECTORY}
+#rm -rf ${DOTFILES_DIRECTORY}
 
 # Finish
 e_success "Reboot and enjoy!"
