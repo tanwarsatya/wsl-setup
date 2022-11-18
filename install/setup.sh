@@ -7,6 +7,13 @@
 source ./install/utils.sh
 keep_sudo_alive
 
+# Add current user to sudoers file
+echo '$USER  ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+# Create Directories
+e_header "Creating shareddata directory in Home"
+mkdir ${HOME}/shareddata
+
 # Install applications
 seek_confirmation "Warning: This step install applications."
 if is_confirmed; then
@@ -27,9 +34,7 @@ fi
 
 
 
-# Create a directory for projects and development
-e_header "Creating Developer directory in Home"
-mkdir ${HOME}/Developer
+
 
 # Cleanup cached downloads and remove the installation zip and folder
 e_header "Removing unnecessary files"

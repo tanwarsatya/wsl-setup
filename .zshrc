@@ -113,7 +113,7 @@ source $ZSH/oh-my-zsh.sh
 # default directory
 cd ~
 
-sudo mount -t drvfs '\\home-nas\VMSharedData\' /home/stanwar/shareddata
+sudo mount -t drvfs '\\home-nas\VMSharedData\' /home/$USER/shareddata
 
 alias k=kubectl
 complete -F __start_kubectl k
