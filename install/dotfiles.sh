@@ -25,10 +25,6 @@ replace ".gitignore_global" ".gitignore_global"
 replace ".zshrc"            ".zshrc"
 replace ".p10k.zsh"            ".p10k.zsh"
 
-# Git configs
-e_header "Configure your Git settings: "
-nano ${HOME}/.gitconfig
-
 # reload the soure ZSH
 source .zshrc
 

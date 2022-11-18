@@ -15,22 +15,14 @@ e_header "Creating shareddata directory in Home"
 mkdir ${HOME}/shareddata
 
 # Install applications
-seek_confirmation "Warning: This step install applications."
-if is_confirmed; then
-  e_header "Please, configure you applications before installation:"
-  nano ${DOTFILES_DIRECTORY}/install/apps.sh
-  bash ./install/apps.sh
-else
-  e_warning "Skipped applications install."
-fi
+e_warning "Warning: This step install applications."
+bash ./install/apps.sh
+
 
 # Dotfiles configs
-seek_confirmation "Warning: This step may overwrite your existing dotfiles and git configs."
-if is_confirmed; then
-  bash ./install/dotfiles.sh
-else
-  e_warning "Skipped dotfiles settings."
-fi
+e_warning "Warning: This step may overwrite your existing dotfiles and git configs."
+bash ./install/dotfiles.sh
+
 
 
 
